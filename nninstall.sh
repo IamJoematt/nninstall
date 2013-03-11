@@ -1,7 +1,6 @@
 #!/bin/bash
 
 clear
-clear
 echo "This installs newznab apache sql sphinx mediainfo ffmpeg and everything that is needed to your ubuntu install."
 echo 
 echo "Setup will continue in a few seconds."
