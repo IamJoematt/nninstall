@@ -115,10 +115,13 @@ do sphinx
 read CHOICE
 case "$CHOICE" in
 
+
 					"y")
+clear
 		echo "Installing Sphinxsearch..."
-		add-apt-repository -y ppa:builds/sphinxsearch-stable
-		apt-get -q=3 update
+sleep 3
+#		add-apt-repository -y ppa:builds/sphinxsearch-stable
+#		apt-get -q=3 update
 		apt-get install -y -q=3 sphinxsearch
 	echo "Sphinx is now installed....."
 sleep 2
@@ -144,8 +147,7 @@ apt-get -y install -q=3 x264
 apt-get -y install -q=3 mediainfo
 apt-get -y install -q=3 unrar
 apt-get -y install -q=3 lame
-# apt-get -y install phpmyadmin
-
+clear
 echo "ffmpeg x264 mediainfo unrar lame is now installed..."
 sleep 5 
 
@@ -239,6 +241,7 @@ case "$CHOICE" in
 									break
 ;;			
 					"n")
+					clear
 					echo "Skipping PhpMyadmin install"
 					break
 ;;			
@@ -249,8 +252,7 @@ done
 
 
 
-
-echo "---------------------------------------------"
+clear
 echo -n -e "Do you want to install Jonnyboy's tmux scripts?\n   (y or no.)\n"
 read choice
  
@@ -267,7 +269,7 @@ echo "Installing apc chaching "
 apt-get install -y -q=3 php-apc
 cp /usr/share/doc/php-apc/apc.php /var/www/newznab/www/admin/apc.php
 clear
-echo "Apc caching is not installed"
+echo "Apc caching is now installed"
 echo "Server restart is required to activate APC"
 sleep 4
 
@@ -285,7 +287,6 @@ clear
 
 echo "Install Complete...."
 echo "Go to http://localhost/install to finish NN+ install."
-#echo "After that you have to enable sphinx in your admin panel then generate your sphinx config."
 echo "For questions and problems log on to #newznab or #newznab-tmux on Synirc and look for zombu2"
 echo "Good Luck."
 exit 100

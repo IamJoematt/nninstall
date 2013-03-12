@@ -14,10 +14,14 @@ exit 100
 fi 
 echo "\033[1;32mElevated privileges confirmed.\nBeginning configurations...\033[1;37m"
 sleep 2
-
-
-apt-get purge -y -q=3 openssh-server php5 php5-dev php-pear php5-gd php5-mysql php5-curl mysql-server mysql-client libmysqlclient-dev apache2 python-software-properties ffmpeg x264 mediainfo unrar lame subversion phpmyadmin php-apc
+clear
+echo "If you see an error removing phpmyadmin choose abort and uninstall will continue\nand phpmyadmin will be removed."
+sleep 5
+apt-get remove --purge -y -q=3 phpmyadmin php5 php5-dev php-pear php5-gd php5-mysql php5-curl mysql-server mysql-client mysql-common sphinxsearch libmysqlclient-dev apache2 python-software-properties ffmpeg x264 mediainfo unrar lame subversion  php-apc
 apt-get autoremove -y -q=3
+apt-get autoclean
+rm -rf /etc/mysql
+#find / -iname 'mysql*' -exec rm -rf {} \;
 clear
 rm -rf /var/www/newznab/
 echo "All Gone you Fucked!!!"
