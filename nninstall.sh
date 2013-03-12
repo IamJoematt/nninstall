@@ -65,7 +65,7 @@ do
 
                     echo "Installing Prerequirements......"
 
-                    apt-get install -y -q=3 openssh-server
+#                    apt-get install -y -q=3 openssh-server
 						apt-get install -y -q=3 build-essential checkinstall
 						mkdir -p /var/www/newznab
 						chmod 777 /var/www/newznab
