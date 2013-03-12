@@ -189,6 +189,9 @@ echo "Modifying system Files....."
 
 sleep 1
 clear
+cp /etc/php5/apache2/php.ini /etc/php5/apache2/php.bak
+cp /etc/php5/cli/php.ini /etc/php5/cli/php.bak
+
 wget -O /home/newznab http://bandofbrothers.3owl.com/nn/newznab
 mv /home/newznab /etc/apache2/sites-available/newznab
 clear
