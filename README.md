@@ -2,3 +2,5 @@ nninstall
 =========
 
 Newznab+ autoinstaller for 12.10 and mint 14
+
+USE EXTREME CAUTION WITH THE UNINSTALLER SCRIPT IT WILL REMOVE ANYTHING NEWZNAB RELATED!!!!!!!
