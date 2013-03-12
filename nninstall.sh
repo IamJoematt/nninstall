@@ -259,14 +259,21 @@ cd tmux
 cp config.sh defaults.sh
 fi
 
-
+clear
+echo "Installing apc chaching "
+apt-get install -y -q=3 php-apc
+cp /usr/share/doc/php-apc/apc.php /var/www/newznab/www/admin/apc.php
+clear
+echo "Apc caching is not installed"
+echo "Server restart is required to activate APC"
+sleep 4
 
 
 clear
 echo "-----------------------------------------------"
 echo "Make sure to edit the defaults.sh to your likeing if you choose to run Jonny's script then go into the scripts folder and run ./svn_update.sh"
 echo "\033[1;31mDO NOT SKIP THAT STEP YOU HAVE BEEN WARNED!!!\033[1;37m"
-sleep 7
+sleep 10
 clear
 
 
