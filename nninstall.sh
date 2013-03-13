@@ -19,13 +19,13 @@ clear
 
 rootcheck ()
 {
-#echo "Checking for root before we begin...."
+echo "Checking for root before we begin...."
 
 if ! [ $(id -u) = 0 ]; then
 echo "You must be root to do this DOH...." 1>&2
 exit 100
 fi 
-#echo "\033[1;32mElevated privileges confirmed.\nBeginning configurations...\033[1;37m"
+echo "\033[1;32mElevated privileges confirmed.\nBeginning configurations...\033[1;37m"
 sleep 2
 }
 
@@ -33,7 +33,6 @@ update ()
 {
 echo "Updating Please Wait....." 
 apt-get -q=3 update
-#apt-get -q=3 dist-upgrade
 clear
 }
 
